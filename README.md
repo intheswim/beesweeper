@@ -33,6 +33,8 @@ Prerequisites  are  SDL2.  To build, simply run  make.  This app  has also  been
 published   on   Ubuntu   Store    as   a   snap.   You   can    get   it   from
 https://snapcraft.io/beesweeper 
 
+</pre>
+
 #### On this version of the source code 
 
 <pre>
