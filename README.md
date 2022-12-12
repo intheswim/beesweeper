@@ -1,5 +1,7 @@
 #### Background 
 
+<pre>
+
 Beesweeper (or Hex Minsweeper) is a  simple game  I  originally created back in 1996-1997 when I was
 learning Windows API  programming. I had Windows 3.1  back then with  free Minesweeper installed and
 got inspired  by this game to  create  something similar, also as a learning excercise, so of course
@@ -16,13 +18,18 @@ stores between 2010 and 2015. These versions included sharing results online so 
 their personal records. The "record store" was shared between users of all devices. Since Blackberry
 devices had all different screen sizes, I included an option to "simulate" other devices screens. 
 
+</pre>
+
 #### To build and install 
 
+<pre>
 Prerequisites are SDL2. To build, simply run make.  This app has also been published on Ubuntu Store 
 as a snap. You can get it from  https://snapcraft.io/beesweeper
+</pre>
 
 #### On this version of the source code 
 
+<pre>
 In 2022 I was planning to port some of  my games  to SDL. Before jumping to something more complex I
 decided to port this relatively simple game to use SDL, otherwise it will be lost. Hopefully it will
 work  as long  as SDL is  supported as  I lost  all  my  hope with corporate platforms such as  iOS,
@@ -40,8 +47,11 @@ I also noticed that on Ubuntu (the only Linux platform  I tried  it on so far)  
 renderer  is "software", while on  Windows 10  it's  better with "accelerated"  (GPU) renderer. This
 differencea has been hard-coded in game.cpp. 
 
+</pre>
+
 #### Differences from classic Minesweeper 
 
+<pre>
 1. The game supports both hexagon and classic (squares) modes. One important difference from classic
 Minesweeper  is so-called "auto-mark" mode (turned on by default). In this  mode all mines that  are
 obvious marked automatically as user opens  additional  cells. I had mixed feedback on this  feature
@@ -57,8 +67,11 @@ with #USE_BATCHED define; there's also a setting/command line option that contro
 3. The very first cell you click on  never has  a mine -  eliminating the situation when you step on
 the mine immediately at the start. 
 
+</pre>
+
 ### Options / Settings 
 
+<pre>
 Options are invoked at command line level or by clicking on a small black button next to timer. They
 are  read from optional config.ini  file when no  options are  given. Enter  ./mines  --help  to see
 command line syntax. 
@@ -66,6 +79,7 @@ command line syntax.
 The  game  has two  modes  (squares and hexagons), three levels (the differ  by how  many mines  are
 present), custom choice of the field size and option to show or hide question marks with right mouse
 click. Enjoy. 
+</pre>
 
 ### License 
 
