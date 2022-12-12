@@ -101,8 +101,4 @@ hide question marks with right mouse click. Enjoy.
 
 ### License 
 
-<pre>
-
 [MIT](https://choosealicense.com/licenses/mit/) 
-
-</pre>
