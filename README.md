@@ -103,6 +103,11 @@ hide question marks with right mouse click. Enjoy.
 
 </pre>
 
+A screenshot of the classic option:
+
+![Screenshot](/screenshot2.png)
+
+
 ### License 
 
 [MIT](https://choosealicense.com/licenses/mit/) 
