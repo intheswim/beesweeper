@@ -25,6 +25,10 @@ screens.
 
 </pre>
 
+A screenshot of the hex option:
+
+![Screenshot](/screenshot1.png)
+
 #### To build and install 
 
 <pre>
