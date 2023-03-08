@@ -39,7 +39,18 @@ bool gameSettings::save () const
     if (config_loc == nullptr)
         config_loc = getenv ("HOME");
 
-    std::string full_path = config_loc ? (std::string(config_loc) + "/" + szConfigIni) : std::string (szConfigIni);
+#if defined(_MSC_VER)
+    if (config_loc == nullptr)
+    {
+        config_loc = getenv("HOMEPATH");
+    }
+#endif
+
+#if defined(_MSC_VER)
+    std::string full_path = config_loc ? (std::string(config_loc) + "\\" + szConfigIni) : std::string(szConfigIni);
+#else 
+    std::string full_path = config_loc ? (std::string(config_loc) + "/" + szConfigIni) : std::string(szConfigIni);
+#endif
 
 
 #if defined(_MSC_VER)
@@ -134,9 +145,20 @@ int gameSettings::parse (int argc, char * argv[])
     if (config_loc == nullptr)
         config_loc = getenv ("HOME");
 
+#if defined(_MSC_VER)
+    if (config_loc == nullptr)
+    {
+        config_loc = getenv("HOMEPATH");
+    }
+#endif
+
     if (argc == 1) // when no arguments given, read config file.
     {
+#if defined(_MSC_VER)
+        std::string full_path = config_loc ? (std::string(config_loc) + "\\" + szConfigIni) : std::string(szConfigIni);
+#else 
         std::string full_path = config_loc ? (std::string(config_loc) + "/" + szConfigIni) : std::string(szConfigIni);
+#endif
         
         std::ifstream ini_file(full_path.c_str());
 
